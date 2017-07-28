@@ -3,8 +3,8 @@ package com.auctionCoding.API;
 import java.awt.List;
 import java.util.ArrayList;
 
-import com.auctionCoding.bid.Bid;
-import com.auctionCoding.bidder.Bidder;
+import com.auctionCoding.beans.Listing;
+import com.auctionCoding.beans.Bidder;
 
 /**
  * 
@@ -17,13 +17,12 @@ public class AuctionBiddingAPI implements AuctionBidding {
 	/**
 	 * 
 	 * Method to return the bid winner object Inside object contains Bidding
-	 * price and name of bidder.
-	 * This method uses to enhanced for loops to compare all bidders prices
-	 * and makes sure that the highest bidder is chosen
-	 * If there is a tie it returns the bidder who bidded first
+	 * price and name of bidder. This method uses two enhanced for loops to
+	 * compare all bidders prices and makes sure that the highest bidder is
+	 * chosen If there is a tie it returns the bidder who bidded first
 	 * 
 	 */
-	public Bidder bidWinner(Bid bid, ArrayList<Bidder> bidders) {
+	public Bidder determineWinner(Listing bid, ArrayList<Bidder> bidders) {
 
 		Bidder winner = new Bidder("", 0, 0, 0, 0);				//Object used to choose the best bidder
 		bid.setBidderList(bidders);								//Setting list of bidders for current bid
@@ -78,5 +77,6 @@ public class AuctionBiddingAPI implements AuctionBidding {
 
 		return winner;			//returns the winner and the best bidding price all in one object
 	}
+
 
 }

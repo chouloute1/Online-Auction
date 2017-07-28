@@ -1,4 +1,4 @@
-package com.auctionCoding.bidder;
+package com.auctionCoding.beans;
 
 /**
  * 

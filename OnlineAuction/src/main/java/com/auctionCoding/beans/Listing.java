@@ -1,8 +1,8 @@
-package com.auctionCoding.bid;
+package com.auctionCoding.beans;
 
 import java.util.ArrayList;
 
-import com.auctionCoding.bidder.Bidder;
+import com.auctionCoding.beans.Bidder;
 
 /**
  * 
@@ -11,7 +11,7 @@ import com.auctionCoding.bidder.Bidder;
  * This class is to form an Bid
  *  Object
  */
-public class Bid {
+public class Listing {
 
 	private String item;					//string item 
 	private int bidID;						// bid Identification
@@ -26,7 +26,7 @@ public class Bid {
 	 * 
 	 *  Constructor used to form a new bid
 	 */
-	public Bid(String item, int bidID) {
+	public Listing(String item, int bidID) {
 		super();
 		this.item = item;
 		this.bidID = bidID;

@@ -2,8 +2,8 @@ package com.auctionCoding.API;
 
 import java.util.ArrayList;
 
-import com.auctionCoding.bid.Bid;
-import com.auctionCoding.bidder.Bidder;
+import com.auctionCoding.beans.Listing;
+import com.auctionCoding.beans.Bidder;
 
 /**
  * 
@@ -14,6 +14,6 @@ import com.auctionCoding.bidder.Bidder;
  */
 public interface AuctionBidding {
 
-	Bidder bidWinner(Bid bid, ArrayList<Bidder> bidders);
+	Bidder determineWinner(Listing bid, ArrayList<Bidder> bidders);
 
 }
